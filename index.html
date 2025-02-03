@@ -75,7 +75,7 @@
   <body>
     <div class="container">
       <div class="header">
-        <img src="Logo_TP.png" alt="Tetra Pak Logo" class="logo" />
+        <img src="Logo_TP.png" alt="Logo" class="logo" />
         <h2>Password Reset Mail Generator</h2>
       </div>
 
@@ -178,21 +178,9 @@
           `Hello ${recipient},\n\n` +
           `${userId} contacted Global Service Desk to reset his Windows AD logon password.\n\n` +
           `We have unlocked and reset Windows AD logon password to ${tempPassword} (Password is case sensitive!!!)\n\n` +
-          `He has to log on to a Company computer with userID to change the login password.\n\n` +
-          `Company name password complexity rules:\n` +
-          `- Must be at least 15 characters in length.\n` +
-          `- Must be different from your previous 12 passwords.\n` +
-          `- Must consist of a mix of 4 character types:\n` +
-          `  a. Upper case letters.\n` +
-          `  b. Lower case letters.\n` +
-          `  c. Numbers.\n` +
-          `  d. Special characters.\n\n` +
-          `- Must NOT contain:\n` +
-          `  a. Your first or last name.\n` +
-          `  b. Your username (ex: USSMITHJ).\n` +
-          `  c. Repeated numbers (ex: 111111111111111).\n` +
-          `  d. Repeated letters (ex: AAAAAAAAAAAAAAA).\n` +
-          `  e. Passwords that are the same as the previous 12 passwords.\n\n`;
+          `As this a temporary password please use the below link to reset your password.\n\n` +
+          `Link to the password change portal: https://passwordreset.microsoftonline.com/ \n\n` +
+          `Best Regards,\n`;
 
         // Create mailto link
         const subject = `Password Reset for ${userId}`;
